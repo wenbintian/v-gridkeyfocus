@@ -1,4 +1,4 @@
-import vueGridKeyfocus from "./vue-grid-keyfocus.js";//导入表格快捷键组件
+import vueGridKeyfocus from "./vue-gridkeyfocus.js";//导入表格快捷键组件
 const gridKeyfocus = {
   install(Vue,options){
     Vue.directive("gridkeyfocus", vueGridKeyfocus);//自定义指令 v-keyfocus
