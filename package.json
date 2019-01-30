@@ -5,7 +5,7 @@
   "author": "wenbintian(972619117@qq.com)",
   "license": "MIT",
   "private": false,
-  "main":"dist/vue-grid-keyfocus.js",
+  "main":"dist/vue-gridkeyfocus.js",
   "files": ["dist","src"],
   "repository":{
     "type":"git",
