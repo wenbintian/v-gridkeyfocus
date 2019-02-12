@@ -22,26 +22,16 @@ npm install vue-gridkeyfocus
 
 ## Example
 [例子](https://github.com/wenbintian/vue-gridkeyfocus/blob/master/example/index.html)
+		<h3>源码</h3>
+		<div class="padding_class" v-gridkeyfocus="gridKeyFlag" :data-current="current3" data-prefix="table_">
+			<table>
+			<tr v-for="(item,index) in tbData" :key="item.id">
+				<td><input v-model="item.text"  :ref="`table_${index}`" @focus="current3=`table_${index}[0]`"></td>
+				<td><input :disabled="item.text3Disabeld" v-model="item.text3" :ref="`table_${index}`" @focus="current3=`table_${index}[1]`"></td>
+				<td><input v-model="item.text2" :ref="`table_${index}`" @focus="current3=`table_${index}[2]`"></td>
+			</tr></table>
+		</div>
 
-      <h3>源码</h3>
-      <div class="padding_class font_big">
-        <pre><code>
-          &lt;div class=&quot;padding_class&quot; v-gridkeyfocus=&quot;gridKeyFlag&quot; :data-current=&quot;current3&quot; data-prefix=&quot;table_&quot;&gt;
-          &lt;table&gt;
-          &lt;tr v-for=&quot;(item,index) in tbData&quot; :key=&quot;item.id&quot;&gt;
-          &lt;td&gt;&lt;input v-model=&quot;item.text&quot;  :ref=&quot;&#x60;table_${index}&#x60;&quot; @focus=&quot;current3=&#x60;table_${index}[0]&#x60;&quot;&gt;&lt;/td&gt;
-          &lt;td&gt;&lt;input v-model=&quot;item.text2&quot; :ref=&quot;&#x60;table_${index}&#x60;&quot; @focus=&quot;current3=&#x60;table_${index}[1]&#x60;&quot;&gt;&lt;/td&gt;
-          &lt;/tr&gt;&lt;/table&gt;
-          &lt;/div&gt;
-          data() {
-            return {
-              tbData:[{text:"",text2:"",text3:"",text3Disabeld:false,id:1},{text:"",text2:"",text3:"",text3Disabeld:true,id:2},{text:"",text2:"",text3:"",text3Disabeld:false,id:3}],
-              gridKeyFlag:false,
-              current3:1
-            }
-          },
-        </code></pre>
-      </div>
       <h3>原理</h3>
       <div class="padding_class">
         <p>1：通过 v-gridkeyfocus 绑定了该节点的 keyup事件</p>
@@ -69,5 +59,4 @@ npm install vue-gridkeyfocus
         </table>
       </div>
     </div>
-
 
