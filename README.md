@@ -8,7 +8,7 @@ npm install vue-gridkeyfocus
 
 ## Usage
 
-### 引入指令
+## 引入指令
 
  * import Gridkeyfocus from 'vue-gridkeyfocus'
  * Vue.use(Gridkeyfocus)
