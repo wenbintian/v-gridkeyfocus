@@ -20,7 +20,8 @@ npm install vue-gridkeyfocus
  for循环里面要被定位的组件必须有 focus方法，否则定位会没有效果；同时可以设置 disabled属性
 
 ## Example
-[源码 例子](https://github.com/wenbintian/vue-gridkeyfocus/blob/master/example/index.html)
+[线上例子](https://wenbintian.github.io/grid-key-focus/)
+[源码](https://github.com/wenbintian/vue-gridkeyfocus/blob/master/example/index.html)
       <h3>原理</h3>
       <div class="padding_class">
         <p>1：通过 v-gridkeyfocus 绑定了该节点的 keyup事件</p>
