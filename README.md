@@ -22,7 +22,7 @@ npm install vue-gridkeyfocus
 
 ## Example
 [例子](https://github.com/wenbintian/vue-gridkeyfocus/blob/master/example/index.html)
-		<template>
+		<!html>
 		<h3>源码</h3>
 		<div class="padding_class" v-gridkeyfocus="gridKeyFlag" :data-current="current3" data-prefix="table_">
 			<table>
@@ -60,5 +60,5 @@ npm install vue-gridkeyfocus
         </table>
       </div>
     </div>
-    </template>
+    </html>
 
