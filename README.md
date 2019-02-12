@@ -10,31 +10,18 @@ npm install vue-gridkeyfocus
 
 ### 引入指令
 
- import Gridkeyfocus from 'vue-gridkeyfocus'
- Vue.use(Gridkeyfocus)
+ * import Gridkeyfocus from 'vue-gridkeyfocus'
+ * Vue.use(Gridkeyfocus)
 
  <!-- OR -->
- <script src="../node_modules/vue/dist/vue.js"></script>
- <script src="../dist/vue-gridkeyfocus.js"></script>
+ * <script src="../node_modules/vue/dist/vue.js"></script>
+ * <script src="../dist/vue-gridkeyfocus.js"></script>
 
 ### 限制
  for循环里面要被定位的组件必须有 focus方法，否则定位会没有效果；同时可以设置 disabled属性
 
 ## Example
-[例子](https://github.com/wenbintian/vue-gridkeyfocus/blob/master/example/index.html)
-		<!DOCTYPE html>
-		<html>
-		<body>
-		<h3>源码</h3>
-		<div class="padding_class" v-gridkeyfocus="gridKeyFlag" :data-current="current3" data-prefix="table_">
-			<table>
-			<tr v-for="(item,index) in tbData" :key="item.id">
-				<td><input v-model="item.text"  :ref="`table_${index}`" @focus="current3=`table_${index}[0]`"></td>
-				<td><input :disabled="item.text3Disabeld" v-model="item.text3" :ref="`table_${index}`" @focus="current3=`table_${index}[1]`"></td>
-				<td><input v-model="item.text2" :ref="`table_${index}`" @focus="current3=`table_${index}[2]`"></td>
-			</tr></table>
-		</div>
-
+[源码 例子](https://github.com/wenbintian/vue-gridkeyfocus/blob/master/example/index.html)
       <h3>原理</h3>
       <div class="padding_class">
         <p>1：通过 v-gridkeyfocus 绑定了该节点的 keyup事件</p>
@@ -62,5 +49,5 @@ npm install vue-gridkeyfocus
         </table>
       </div>
     </div>
-    </body></html>
+
 
