@@ -23,30 +23,6 @@ npm install vue-gridkeyfocus
 ## Example
 [例子](https://github.com/wenbintian/vue-gridkeyfocus/blob/master/example/index.html)
 
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>keyfocus</title>
-    <link rel="stylesheet" href="./highlight-9.12.0.min.css">
-  </head>
-  <body>
-  <script src="../node_modules/vue/dist/vue.js"></script>
-  <script src="../dist/vue-gridkeyfocus.js"></script>
-  <script src="./jquery-1.11.1.min.js"></script>
-  <script src="./highlight-9.12.0.min.js"></script>
-    <div id="app">
-      <h2>表格快捷键例子</h2>
-      <h5>顺向快捷键：ctrl/enter键</h5>
-      <h5>逆向快捷键：ctrl+tab/ctrl+enter键</h5>
-      <div class="padding_class" v-gridkeyfocus="gridKeyFlag" :data-current="current3" data-prefix="table_">
-        <table>
-        <tr v-for="(item,index) in tbData" :key="item.id">
-          <td><input v-model="item.text"  :ref="`table_${index}`" @focus="current3=`table_${index}[0]`"></td>
-          <td><input :disabled="item.text3Disabeld" v-model="item.text3" :ref="`table_${index}`" @focus="current3=`table_${index}[1]`"></td>
-          <td><input v-model="item.text2" :ref="`table_${index}`" @focus="current3=`table_${index}[2]`"></td>
-        </tr></table>
-      </div>
       <h3>源码</h3>
       <div class="padding_class font_big">
         <pre><code>
@@ -93,36 +69,5 @@ npm install vue-gridkeyfocus
         </table>
       </div>
     </div>
-  <script>
-     new Vue({
-       el: '#app',
-       data() {
-         return {
-           tbData:[{text:"",text2:"",text3:"",text3Disabeld:false,id:1},{text:"",text2:"",text3:"",text3Disabeld:true,id:2},{text:"",text2:"",text3:"",text3Disabeld:false,id:3}],
-           isPay: false,
-           gridKeyFlag:false,
-           current3:1
-         }
-       },
-       mounted(){
-         setTimeout(()=>{
-           console.log("sss");
-           this.gridKeyFlag=!this.gridKeyFlag;
-         },2000);
-         $('pre code').each(function(i, block) {
-           hljs.highlightBlock(block);
-         });
-       }
-
-
-     })
-  </script>
-  </body>
-  <style>
-    .padding_class{padding: 30px 20px;}
-    h5{margin: 5px 20px;}
-    .font_big{font-size: 18px;}
-  </style>
-</html>
 
 
